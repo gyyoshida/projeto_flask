@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block title %}Produtos{% endblock %}
+
+{% block content %}
+<h1>Produtos</h1>
+{% for produto in produtos %}
+<h2>{{ produto.nome }}</h2>
+<p>{{ produto.descricao }}</p>
+<a href="/produtos/{{ produto.nome }}">Ver produto</a>
+{% endfor %}
+{% endblock %}
